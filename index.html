@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input name="text" id="inputField" placeholder="Type something...">
+    <input age="text" id="inputField2" placeholder="Type something else...">
+
+    <button id="submitButton">Submit</button>
+
+
+    <script>
+        document.getElementById('submitButton').addEventListener('click', function() {
+            const input1 = document.getElementById('inputField').value;
+            const input2 = document.getElementById('inputField2').value;
+
+
+            localStorage.setItem('inputField', input1);
+            localStorage.setItem('inputField2', input2);
+
+        
+            alert(`Input 1: ${input1}\nInput 2: ${input2}`);
+        });
+    </script>
+
+    
+</body>
+</html>
